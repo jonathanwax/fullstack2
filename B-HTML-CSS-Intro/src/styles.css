@@ -1,0 +1,17 @@
+h2 {
+    font-size: 20px;
+    background-color: green;
+}
+
+article {
+    border: 1px red solid;
+    margin: 2px;
+}
+
+ul li {
+    color: red;
+}
+
+.active {
+    font-weight: bold;
+}
