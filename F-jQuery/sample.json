@@ -1,0 +1,21 @@
+{
+    {
+        "name": "Jonathan"
+    },
+    {
+        "name": "Sivan"
+    }
+}
+
+
+[
+    "key1": {
+        "name": "Shalom"
+    },
+    "key2": {
+        "name": "Shalom2"
+    }
+]
+
+
+arr["key1"]
