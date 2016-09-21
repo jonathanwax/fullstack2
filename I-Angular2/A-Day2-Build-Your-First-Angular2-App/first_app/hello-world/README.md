@@ -1,4 +1,4 @@
-# ng-book 2: hello-world app
+# hello-world app
 
 > A bare bones, sanity check Angular 2 app
 
@@ -26,14 +26,3 @@ by running the command:
 ```
 npm run go
 ```
-
-Then visit [http://localhost:8080](http://localhost:8080) in your browser. You should see the text "Hello world".
-
-## Getting Help
-
-In the case where it doesn't work, the first thing to try is looking at the developer console in your browser.
-
-If that doesn't work, [come chat with us](https://gitter.im/ng-book/ng-book)!
-
-
-
