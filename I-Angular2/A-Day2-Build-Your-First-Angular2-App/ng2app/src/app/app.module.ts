@@ -8,6 +8,7 @@ import { ProdwareMessageComponent } from './prodware-message/prodware-message.co
 import { ProdwareMessageFormComponent } from './prodware-message-form/prodware-message-form.component';
 import { ProdwareMessageListComponent } from './prodware-message-list/prodware-message-list.component';
 import { ProdwareMessageItemComponent } from './prodware-message-item/prodware-message-item.component';
+import { MessageService } from './message.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ProdwareMessageItemComponent } from './prodware-message-item/prodware-m
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

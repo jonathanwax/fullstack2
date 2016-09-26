@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Message } from './message.model';
+import { MessageService } from './message.service';
 //import { CommonComponent } from './common.component';
 
 @NgModule({
@@ -7,7 +8,8 @@ import { Message } from './message.model';
     CommonModule
   ],
   providers: [
-    Message
+    Message,
+    MessageService
   ],
   //declarations: [CommonComponent]
 })
