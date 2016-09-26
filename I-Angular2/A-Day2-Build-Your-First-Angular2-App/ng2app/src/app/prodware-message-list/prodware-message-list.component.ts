@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Message } from '../shared/common/message.model';
 
 @Component({
   selector: 'app-prodware-message-list',
@@ -7,13 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdwareMessageListComponent implements OnInit {
 
-  messages: any[];
-
-  constructor() { 
-    this.messages= ["message 1", "message 2", "message 3"];
+  ngOnInit() {
   }
 
-  ngOnInit() {
+  articles: Message[];
+
+  constructor() {
+    this.articles = [
+      new Message('Angular 2', 'http://angular.io', 3),
+      new Message('Fullstack', 'http://fullstack.io', 2),
+      new Message('Angular Homepage', 'http://angular.io', 1),
+    ];
+  }
+
+  addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
+    console.log(`Adding article title: ${title.value} and link: ${link.value}`);
+    this.articles.push(new Message(title.value, link.value, 0));
+    title.value = '';
+    link.value = '';
+    return false;
+  }
+
+  sortedArticles(): Message[] {
+    return this.articles.sort((a: Message, b: Message) => b.votes - a.votes);
   }
 
 }

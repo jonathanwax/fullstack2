@@ -1,18 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Message } from '../shared/common/message.model';
 
 @Component({
-  inputs: ['msg'],
+  inputs: ['article'],
   selector: 'app-prodware-message-item',
   templateUrl: './prodware-message-item.component.html',
   styleUrls: ['./prodware-message-item.component.css']
 })
-export class ProdwareMessageItemComponent implements OnInit {
+export class ProdwareMessageItemComponent{
 
-  msg: string;
+  article: Message;
 
-  constructor() { }
+  voteUp(): boolean {
+    this.article.voteUp();
+    return false;
+  }
 
-  ngOnInit() {
+  voteDown(): boolean {
+    this.article.voteDown();
+    return false;
   }
 
 }

@@ -7,15 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title: string;
-  list: any[];
-
-  //title = 'app works!';
-
-  constructor(){
-    this.title = "shalom";
-    //this.list = ['Avi', 'Jonathan', 'Gal', 'Shahar'];
-    this.list = [{name: 'Avi', age: 10}, {name: 'Gal', age: 20}];
-  }
-
 }
