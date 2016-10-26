@@ -1,16 +1,16 @@
-<form class="ui large form segment">
-  <h3 class="ui header">Add a Link</h3>
+<form class="col-xs-12">
+	<h3>Add a Link</h3>
 
-  <div class="field">
-    <label for="title">Title:</label>
-    <input name="title" #newtitle>
-  </div>
-  <div class="field">
-    <label for="link">Link:</label>
-    <input name="link" #newlink>
-  </div>
+	<div class="form-group">
+		<label for="title">Title:</label>
+		<input name="title" class="form-control" #newtitle>
+	</div>
+	<div class="form-group">
+		<label for="link">Link:</label>
+		<input name="link" class="form-control" #newlink>
+	</div>
 
-  <button (click)="addMessage(newtitle, newlink)" class="ui positive right floated button">
+	<button (click)="addMessage(newtitle, newlink)" class="btn btn-primary">
         Submit link
       </button>
 </form>

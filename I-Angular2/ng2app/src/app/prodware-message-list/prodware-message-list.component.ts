@@ -15,11 +15,12 @@ export class ProdwareMessageListComponent implements OnInit {
   messages: Message[];
 
   constructor(private messageService: MessageService) {
-    this.messageService.getMessages().then(messages => this.messages = messages);  
+    this.messageService.getMessages().then(messages => this.messages = messages);
     //this.heroService.getHeroes().then(heroes => this.heroes = heroes);      
   }
 
-  sortedArticles(): Message[] {
+  sortedMessages(): Message[] {
+    if (!this.messages) { return; }
     return this.messages.sort((a: Message, b: Message) => b.votes - a.votes);
   }
 

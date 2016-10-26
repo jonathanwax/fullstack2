@@ -1,4 +1,2 @@
-<div class="ui grid posts">
-  <app-prodware-message-item *ngFor="let article of messages" [article]="article">
-  </app-prodware-message-item>
-</div>
+<app-prodware-message-item *ngFor="let message of sortedMessages()" [article]="message" class="col-xs-12">
+</app-prodware-message-item>

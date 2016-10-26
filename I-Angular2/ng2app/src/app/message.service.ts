@@ -14,7 +14,7 @@ export class MessageService implements OnInit {
     ];
   }
 
-  addMessage(message:Message){
+  addMessage(message: Message) {
     this.messages.push(message);
   }
 
