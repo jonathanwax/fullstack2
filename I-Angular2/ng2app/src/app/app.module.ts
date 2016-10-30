@@ -10,6 +10,9 @@ import { ProdwareMessageListComponent } from './prodware-message-list/prodware-m
 import { ProdwareMessageItemComponent } from './prodware-message-item/prodware-message-item.component';
 import { MessageService } from './message.service';
 
+import { MessagesModule } from './messages/messages.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,8 @@ import { MessageService } from './message.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MessagesModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
