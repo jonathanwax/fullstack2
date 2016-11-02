@@ -4,22 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ProdwareMessageComponent } from './prodware-message/prodware-message.component';
-import { ProdwareMessageFormComponent } from './prodware-message-form/prodware-message-form.component';
-import { ProdwareMessageListComponent } from './prodware-message-list/prodware-message-list.component';
-import { ProdwareMessageItemComponent } from './prodware-message-item/prodware-message-item.component';
-import { MessageService } from './message.service';
 
+import { MessageService } from './messages.service';
 import { MessagesModule } from './messages/messages.module';
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProdwareMessageComponent,
-    ProdwareMessageFormComponent,
-    ProdwareMessageListComponent,
-    ProdwareMessageItemComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
