@@ -8,13 +8,14 @@ import 'rxjs/add/operator/toPromise';
 export class MessageService implements OnInit {
 
     messages: Message[];
-
+    _messagesUrl: string;
     constructor(private http: Http) {
         this.messages = [
             new Message('Angular 2', 'http://angular.io', 3),
             new Message('Fullstack', 'http://fullstack.io', 2),
             new Message('Angular Homepage', 'http://angular.io', 1)
         ];
+        this._messagesUrl = "http://localhost:10010/message";
     }
 
     addMessage(message: Message) {
@@ -33,12 +34,12 @@ export class MessageService implements OnInit {
         //     .catch(this.handleError);
 
 
-        return this.http.get("https://demo2640180.mockable.io/messages")
+        return this.http.get(this._messagesUrl)
             .toPromise()
             .then(response => {
                 var j = response.json();
                 // var d = j.data;
-                var m = j as Message[];
+                var m = j.message as Message[];
                 return m;
                 //response.json().data as Message[];
             })
