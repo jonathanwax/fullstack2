@@ -4,33 +4,33 @@ var crypto = require('crypto');
 
 module.exports = function () {
     return {
-        movieList: [],
+        messageList: [],
         /*
-         * Save the movie inside the "db".
+         * Save the message inside the "db".
          */
-        save(movie) {
-            movie.id = crypto.randomBytes(20).toString('hex'); // fast enough for our purpose
-            this.movieList.push(movie);
+        save(message) {
+            message.id = crypto.randomBytes(20).toString('hex'); // fast enough for our purpose
+            this.messageList.push(message);
             return 1;
         },
         /*
-         * Retrieve a movie with a given id or return all the movies if the id is undefined.
+         * Retrieve a message with a given id or return all the movies if the id is undefined.
          */
         find(id) {
             if (id) {
-                return this.movieList.find(element => {
+                return this.messageList.find(element => {
                     return element.id === id;
                 });
             } else {
-                return this.movieList;
+                return this.messageList;
             }
         },
         /*
-         * Delete a movie with the given id.
+         * Delete a message with the given id.
          */
         remove(id) {
             var found = 0;
-            this.movieList = this.movieList.filter(element => {
+            this.messageList = this.messageList.filter(element => {
                 if (element.id === id) {
                     found = 1;
                 } else {
@@ -40,15 +40,15 @@ module.exports = function () {
             return found;
         },
         /*
-         * Update a movie with the given id
+         * Update a message with the given id
          */
-        update(id, movie) {
-            var movieIndex = this.movieList.findIndex(element => {
+        update(id, message) {
+            var messageIndex = this.messageList.findIndex(element => {
                 return element.id === id;
             });
-            if (movieIndex !== -1) {
-                this.movieList[movieIndex].title = movie.title;
-                this.movieList[movieIndex].year = movie.year;
+            if (messageIndex !== -1) {
+                this.messageList[messageIndex].title = message.title;
+                this.messageList[messageIndex].year = message.year;
                 return 1;
             } else {
                 return 0;
